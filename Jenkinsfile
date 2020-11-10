@@ -13,7 +13,7 @@ pipeline {
         stage('Linux Tests') {
           steps {
             echo 'Run Linux tests'
-            sh 'sh run_linux_tests.sh'
+            sh 'run_linux_tests.sh'
           }
         }
 
@@ -29,7 +29,7 @@ pipeline {
     stage('Deploy Staging') {
       steps {
         echo 'Deploy to staging environment'
-        input 'OK to deploy to production'
+        input 'OK to deploy to production?'
       }
     }
 
